@@ -4,122 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia completo sobre Low-Code e No-Code. Entenda as diferenças, benefícios e por que utilizar em seus projetos.">
-    <title>O Futuro do Desenvolvimento: Low-Code & No-Code</title>
+    <meta name="description" content="Curso de Automação Digital e Inteligência Artificial - Uma parceria UNIFECAF e Rocketseat.">
+    <title>Automação Digital & IA | UNIFECAF + Rocketseat</title>
 
-    <!-- Fontes modernas e legíveis -->
+    <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS unificado e otimizado -->
+    <!-- Estilos Separados -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- React e Babel via CDN para a parte interativa (o "pouco de React") -->
+    <!-- Scripts Externos (Dependências) -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
-    <!-- Navbar simples e elegante -->
+    <!-- Navbar Modular -->
     <nav class="navbar">
         <div class="nav-container">
-            <span class="logo">unifecaf.dev</span>
+            <div class="brand">
+                <span class="logo">UNIFECAF</span>
+                <span class="separator">×</span>
+                <span class="partner">Rocketseat</span>
+            </div>
             <div class="nav-links">
                 <a href="#inicio">Início</a>
-                <a href="#conceito">Conceito</a>
-                <a href="#comparativo">Comparativo</a>
-                <a href="#por-que">Vantagens</a>
+                <a href="#conceito">Fundamentos</a>
+                <a href="#comparativo">Low vs No</a>
+                <a href="#conclusao" class="nav-btn">Matricule-se</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Seção Hero: Impacto imediato -->
+        <!-- Hero: Título do Curso Correto -->
         <section id="inicio" class="hero">
             <div class="hero-content">
-                <h1 class="reveal-text">Criar software nunca foi tão <span>humano.</span></h1>
-                <p>Descubra como o Low-Code e o No-Code estão democratizando a tecnologia e permitindo que qualquer pessoa transforme ideias em realidade.</p>
+                <div class="kicker">Aula 01 • Introdução</div>
+                <h1>Automação Digital e <span>Inteligência Artificial.</span></h1>
+                <p>Nesta jornada em conjunto com a Rocketseat, você aprenderá a dominar as ferramentas que estão moldando o futuro do trabalho.</p>
                 <div class="hero-actions">
-                    <a href="#conceito" class="btn btn-primary">Começar Jornada</a>
-                    <a href="#por-que" class="btn btn-secondary">Por que usar?</a>
+                    <a href="#conceito" class="btn btn-primary">Iniciar Módulo</a>
+                    <a href="https://unifecaf.com.br" target="_blank" class="btn btn-text">Ver Faculdade &rarr;</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="aula_fundamentos_hero_1775776926485.png" alt="Futuro da Tecnologia">
+            <div class="hero-visual image-reveal">
+                <div class="image-wrapper">
+                    <img src="aula_fundamentos_hero_1775776926485.png" alt="Visual IA UNIFECAF">
+                </div>
             </div>
         </section>
 
-        <!-- Seção Conceito: Explicação clara -->
+        <!-- Conceitos com melhor integração visual -->
         <section id="conceito" class="section">
             <div class="section-header">
-                <h2>O que é essa revolução?</h2>
+                <h2>O Caminho do Código Moderno</h2>
                 <div class="divider"></div>
             </div>
 
             <div class="grid-2">
-                <div class="card card-horizontal">
-                    <div class="card-img">
-                        <img src="low_code_explained_1775778377231.png" alt="Low Code">
+                <div class="feature-card animate-up">
+                    <div class="feature-image">
+                        <img src="low_code_explained_1775778377231.png" alt="Low Code Illustration" class="image-reveal">
                     </div>
-                    <div class="card-body">
+                    <div class="feature-text">
                         <h3>Low-Code</h3>
-                        <p>O Low-Code é o equilíbrio perfeito. Ele oferece ferramentas visuais para acelerar o desenvolvimento, mas permite que desenvolvedores insiram código personalizado quando a lógica exige maior profundidade.</p>
-                        <span class="badge">Para Desenvolvedores & Tech-Savvy</span>
+                        <p>O poder da codificação tradicional com a velocidade da automação. Ideal para integrar IAs complexas a sistemas existentes.</p>
+                        <div class="tags"><span>Flexibilidade</span><span>Escala</span></div>
                     </div>
                 </div>
 
-                <div class="card card-horizontal">
-                    <div class="card-img">
-                        <img src="no_code_explained_1775778499229.png" alt="No Code">
+                <div class="feature-card animate-up" style="animation-delay: 0.2s;">
+                    <div class="feature-image">
+                        <img src="no_code_explained_1775778499229.png" alt="No Code Illustration" class="image-reveal">
                     </div>
-                    <div class="card-body">
+                    <div class="feature-text">
                         <h3>No-Code</h3>
-                        <p>No-Code é pura abstração. Sem escrever uma única linha de código, você constrói sistemas complexos arrastando blocos e definindo regras. É a tecnologia a serviço da criatividade direta.</p>
-                        <span class="badge badge-accent">Para Empreendedores & Designers</span>
+                        <p>A democratização da automação. Crie fluxos de trabalho inteligentes sem tocar em uma única linha de código.</p>
+                        <div class="tags"><span>Agilidade</span><span>Acessibilidade</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Interativa React: Comparativo -->
+        <!-- Comparativo Interativo (React) -->
         <section id="comparativo" class="section bg-dim">
             <div class="section-header">
-                <h2>Lado a Lado</h2>
-                <p>Entenda qual caminho escolher para o seu próximo desafio.</p>
+                <h2>Diferenças Técnicas</h2>
+                <p>Qual abordagem utilizar no seu projeto de automação?</p>
             </div>
             <div id="react-comparison-root">
-                <!-- O componente React será montado aqui -->
-                <div class="loading-placeholder">Carregando comparativo inteligente...</div>
+                 <!-- Renderizado via script.js -->
             </div>
         </section>
 
-        <!-- Seção Benefícios: O "Porquê" -->
-        <section id="por-que" class="section">
-            <div class="grid-3">
-                <div class="info-block">
-                    <div class="icon">🚀</div>
-                    <h4>Velocidade Real</h4>
-                    <p>Reduza o tempo de lançamento (Time-to-Market) de meses para semanas. Teste sua ideia com usuários reais rapidamente.</p>
+        <!-- Vantagens com visual integrado -->
+        <section id="vantagens" class="section section-inverted">
+            <div class="banner-agile image-reveal">
+                <div class="banner-img">
+                    <img src="benefits_agile_1775778597252.png" alt="Diferencial Rocketseat UNIFECAF">
                 </div>
-                <div class="info-block">
-                    <div class="icon">💰</div>
-                    <h4>Custo Reduzido</h4>
-                    <p>Menos tempo de desenvolvimento manual significa custos operacionais mais baixos e maior ROI para o seu projeto.</p>
-                </div>
-                <div class="info-block">
-                    <div class="icon">🤝</div>
-                    <h4>Colaboração</h4>
-                    <p>Une o time de negócios e o time de tecnologia na mesma linguagem: a visual. Menos ruído, mais resultado.</p>
-                </div>
-            </div>
-
-            <div class="banner-benefits">
-                <img src="benefits_agile_1775778597252.png" alt="Agilidade e Benefícios">
-                <div class="banner-content">
-                    <h3>Por que utilizar em seus projetos?</h3>
-                    <p>O desenvolvimento moderno não é sobre quem digita mais rápido, mas sobre quem resolve problemas de forma mais inteligente. O Low-Code permite focar na experiência do usuário e na estratégia, deixando o trabalho repetitivo para a plataforma.</p>
+                <div class="banner-info">
+                    <h2>Por que aprender isso agora?</h2>
+                    <p>
+                        A economia digital exige rapidez. Unir a base acadêmica da <strong>UNIFECAF</strong> 
+                        com a agilidade prática da <strong>Rocketseat</strong> garante que você não apenas 
+                        entenda a teoria, mas saiba aplicar <strong>IA</strong> em problemas reais.
+                    </p>
+                    <ul class="benefit-list">
+                        <li><span>✔</span> Redução drástica de tempo de entrega</li>
+                        <li><span>✔</span> Prototipagem avançada com IA</li>
+                        <li><span>✔</span> Automação de processos empresariais</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -127,55 +126,19 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-brand">
-                <span class="logo">unifecaf.dev</span>
-                <p>Educação e Tecnologia para o mundo real.</p>
+            <div class="footer-info">
+                <span class="logo">UNIFECAF</span>
+                <p>Educação de qualidade para o seu futuro.</p>
             </div>
-            <p class="copyright">&copy; 2026 UNIFECAF - Guia de Fundamentos. Produzido com carinho por Michael.</p>
+            <div class="footer-partnership">
+                <p>Em parceria com:</p>
+                <img src="https://raw.githubusercontent.com/Rocketseat/bootcamp-gostack-desafios/master/.github/rocketseat.png" alt="Rocketseat Logo" class="partner-logo" style="height: 30px; filter: grayscale(1) brightness(2);">
+            </div>
         </div>
     </footer>
 
-    <!-- Lógica em React (Babel) -->
-    <script type="text/babel">
-        const { useState } = React;
-
-        function ComparisonTool() {
-            const data = [
-                { feature: "Conhecimento Técnico", low: "Básico a Intermediário", no: "Nenhum necessário" },
-                { feature: "Customização", low: "Alta (via código)", no: "Limitada pela plataforma" },
-                { feature: "Ideal para", low: "Sistemas Core e APIs", no: "MVPs e Apps Internos" },
-                { feature: "Velocidade", low: "Muito Rápida", no: "Instantânea" }
-            ];
-
-            return (
-                <div class="comparison-container">
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Característica</th>
-                                    <th>Low-Code</th>
-                                    <th>No-Code</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.map((item, idx) => (
-                                    <tr key={idx}>
-                                        <td className="feature-name">{item.feature}</td>
-                                        <td>{item.low}</td>
-                                        <td>{item.no}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            );
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById('react-comparison-root'));
-        root.render(<ComparisonTool />);
-    </script>
+    <!-- Script de lógica Separado -->
+    <script type="text/babel" src="script.js"></script>
 </body>
 
 </html>
