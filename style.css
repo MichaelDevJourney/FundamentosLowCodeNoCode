@@ -113,42 +113,33 @@ h1 {
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Estilização da Hero Image - Ajustada para melhor encaixe (moldura) */
+/* Estilização da Hero Image - Centralizada e emoldurada */
 .hero-image-container {
     width: 100%;
-    aspect-ratio: 16 / 7; /* Proporção mais harmônica para o topo do card */
-    overflow: hidden;
-    position: relative;
-    background: #0f172a; /* Cor de fundo para evitar sombras estranhas antes de carregar */
-}
-
-/* Máscara suave na base da imagem para integração fluida com o texto */
-.hero-image-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to top, var(--card-surface), transparent);
+    padding: 2rem 2rem 0 2rem; /* Espaço para a imagem não tocar as bordas do card */
+    display: flex;
+    justify-content: center;
+    background: transparent;
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 10; /* Proporção que mostra melhor o conteúdo da ilustração */
     object-fit: cover;
-    object-position: center 30%; /* Foca na parte mais importante da ilustração */
+    object-position: center;
+    border-radius: var(--radius-md); /* Bordas arredondadas próprias para a imagem */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-
-.card:hover .hero-image {
-    transform: scale(1.05);
 }
 
 .content {
     padding: 3rem;
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza elementos flex (botões) */
 }
+
 
 h2 {
     font-family: 'Outfit', sans-serif;
