@@ -1,74 +1,69 @@
 // ==========================================================================
-// LÓGICA INTERATIVA - CURSO DE AUTOMAÇÃO DIGITAL & IA
-// UNIFECAF + ROCKETSEAT (SIMULAÇÃO LOW-CODE)
+// UNIFECAF × ROCKETSEAT - CURSO DE AUTOMAÇÃO DIGITAL & IA
+// Lógica de UI e Componentes (Vanilla React para Máxima Compatibilidade)
 // ==========================================================================
 
-const { useState, useEffect } = React;
+const e = React.createElement;
 
 /**
- * Componente de Comparação Inteligente
- * Demonstra a diferença entre Low-Code e No-Code de forma interativa.
+ * Componente de Tabela Comparativa
+ * Escrito sem JSX para funcionar localmente sem erros de CORS ou Babel.
  */
-function ComparisonTool() {
-    const [activeCategory, setActiveCategory] = useState('all');
-
-    const data = [
-        { feature: "Conhecimento Técnico", low: "Básico a Intermediário", no: "Nenhum necessário", category: "tech" },
-        { feature: "Customização", low: "Alta (via código)", no: "Limitada pela plataforma", category: "dev" },
-        { feature: "Ideal para", low: "Sistemas Core e APIs", no: "MVPs e Apps Internos", category: "use" },
-        { feature: "Velocidade", low: "Muito Rápida", no: "Instantânea", category: "speed" }
+function ComparisonTable() {
+    const rows = [
+        { feat: "Conhecimento", low: "Intermediário", no: "Nenhum" },
+        { feat: "Customização", low: "Total (Código)", no: "Limitada" },
+        { feat: "Público Alvo", low: "IT / Devs", no: "Negócios / PMs" },
+        { feat: "Velocidade", low: "Alta", no: "Instantânea" }
     ];
 
-    return (
-        <div className="comparison-container">
-            <div className="table-wrapper animate-in">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Low-Code</th>
-                            <th>No-Code</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {data.map((item, idx) => (
-                            <tr key={idx} className="fade-in-row" style={{ animationDelay: `${idx * 0.1}s` }}>
-                                <td className="feature-name">
-                                    <span className="dot"></span>
-                                    {item.feature}
-                                </td>
-                                <td>{item.low}</td>
-                                <td>{item.no}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-            <p className="table-footer-note">
-                * Dados baseados no currículo de <strong>Automação Digital & IA</strong>.
-            </p>
-        </div>
+    return e('div', { className: 'comparison-box' },
+        e('table', { className: 'modern-table' },
+            e('thead', null,
+                e('tr', null,
+                    e('th', null, 'Atributo'),
+                    e('th', null, 'Low-Code'),
+                    e('th', null, 'No-Code')
+                )
+            ),
+            e('tbody', null,
+                rows.map((r, i) => 
+                    e('tr', { key: i },
+                        e('td', { className: 'feat-name' }, r.feat),
+                        e('td', null, r.low),
+                        e('td', null, r.no)
+                    )
+                )
+            )
+        )
     );
 }
 
-// Inicialização segura do React
-const rootElement = document.getElementById('react-comparison-root');
-if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
-    root.render(<ComparisonTool />);
-}
-
-// Efeitos de Scroll para imagens (Efeito Parallax / Lazy Entrance)
+// Inicialização Direta
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
+    // 1. Renderizar React
+    const rootDiv = document.getElementById('react-comparison-root');
+    if (rootDiv && typeof ReactDOM !== 'undefined') {
+        const root = ReactDOM.createRoot(rootDiv);
+        root.render(e(ComparisonTable));
+    }
+
+    // 2. Lógica de Scroll Reveal (Otimizada)
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target); // Anima apenas uma vez
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    document.querySelectorAll('.image-reveal').forEach(img => {
-        observer.observe(img);
+    document.querySelectorAll('.image-reveal').forEach(el => {
+        revealObserver.observe(el);
     });
 });

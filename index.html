@@ -4,141 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curso de Automação Digital e Inteligência Artificial - Uma parceria UNIFECAF e Rocketseat.">
+    <meta name="description" content="Curso de Automação Digital e Inteligência Artificial - Uma parceria entre UNIFECAF e Rocketseat.">
     <title>Automação Digital & IA | UNIFECAF + Rocketseat</title>
 
     <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
 
-    <!-- Estilos Separados -->
+    <!-- Estilo Principal -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Scripts Externos (Dependências) -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Dependências Externas (CDNs estáveis) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
-<body>
-    <!-- Navbar Modular -->
+<body class="no-js">
+    <!-- Script rápido para detectar JS e remover classe no-js -->
+    <script>document.body.classList.remove('no-js');</script>
+
     <nav class="navbar">
         <div class="nav-container">
-            <div class="brand">
-                <span class="logo">UNIFECAF</span>
-                <span class="separator">×</span>
-                <span class="partner">Rocketseat</span>
+            <div class="brand-group">
+                <div class="brand-item">
+                    <span class="brand-label">FACULDADE</span>
+                    <span class="brand-name">UNIFECAF</span>
+                </div>
+                <div class="brand-divider"></div>
+                <div class="brand-item">
+                    <span class="brand-label">PARCEIRO</span>
+                    <span class="brand-name rocket">ROCKETSEAT</span>
+                </div>
             </div>
+            
             <div class="nav-links">
                 <a href="#inicio">Início</a>
-                <a href="#conceito">Fundamentos</a>
-                <a href="#comparativo">Low vs No</a>
-                <a href="#conclusao" class="nav-btn">Matricule-se</a>
+                <a href="#conceito">Módulos</a>
+                <a href="#comparativo">Low vs No Code</a>
+                <a href="#inscricao" class="btn-nav">Fazer Matrícula</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero: Título do Curso Correto -->
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <div class="kicker">Aula 01 • Introdução</div>
-                <h1>Automação Digital e <span>Inteligência Artificial.</span></h1>
-                <p>Nesta jornada em conjunto com a Rocketseat, você aprenderá a dominar as ferramentas que estão moldando o futuro do trabalho.</p>
-                <div class="hero-actions">
-                    <a href="#conceito" class="btn btn-primary">Iniciar Módulo</a>
-                    <a href="https://unifecaf.com.br" target="_blank" class="btn btn-text">Ver Faculdade &rarr;</a>
+        <!-- Hero Section: Reequilibrada e com Fallback Visível -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <div class="badge-new">CURSO 2026</div>
+                    <h1>Automação Digital & <span>Inteligência Artificial</span></h1>
+                    <p>O desenvolvimento moderno não é apenas sobre digitar código, é sobre orquestrar soluções inteligentes em tempo recorde.</p>
+                    <div class="hero-cta-group">
+                        <a href="#conceito" class="btn btn-primary">Começar Agora</a>
+                        <a href="#" class="btn btn-secondary">Cronograma Completo</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual image-reveal">
-                <div class="image-wrapper">
-                    <img src="aula_fundamentos_hero_1775776926485.png" alt="Visual IA UNIFECAF">
+                <div class="hero-visual-content image-reveal">
+                    <div class="visual-frame">
+                        <img src="assets/aula_fundamentos_hero_1775776926485.png" alt="Hero Illustration">
+                        <div class="visual-overlay"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Conceitos com melhor integração visual -->
-        <section id="conceito" class="section">
-            <div class="section-header">
-                <h2>O Caminho do Código Moderno</h2>
-                <div class="divider"></div>
+        <!-- Seção de Conceitos: Cards Modulares -->
+        <section id="conceito" class="content-section">
+            <div class="section-title">
+                <h2>Fundamentos da Tecnologia</h2>
+                <p>Entenda os dois pilares que sustentam a automação moderna.</p>
             </div>
 
-            <div class="grid-2">
-                <div class="feature-card animate-up">
-                    <div class="feature-image">
-                        <img src="low_code_explained_1775778377231.png" alt="Low Code Illustration" class="image-reveal">
+            <div class="features-grid">
+                <!-- Card 01: Low-Code -->
+                <div class="feature-card-premium image-reveal">
+                    <div class="feature-img-wrapper">
+                        <img src="assets/low_code_explained_1775778377231.png" alt="Low-Code">
                     </div>
-                    <div class="feature-text">
+                    <div class="feature-info">
                         <h3>Low-Code</h3>
-                        <p>O poder da codificação tradicional com a velocidade da automação. Ideal para integrar IAs complexas a sistemas existentes.</p>
-                        <div class="tags"><span>Flexibilidade</span><span>Escala</span></div>
+                        <p>Otimize o desenvolvimento mesclando interfaces visuais com blocos de código customizado para total controle.</p>
+                        <ul class="tag-list">
+                            <li>Performance</li>
+                            <li>Personalização</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="feature-card animate-up" style="animation-delay: 0.2s;">
-                    <div class="feature-image">
-                        <img src="no_code_explained_1775778499229.png" alt="No Code Illustration" class="image-reveal">
+                <!-- Card 02: No-Code -->
+                <div class="feature-card-premium image-reveal">
+                    <div class="feature-img-wrapper">
+                        <img src="assets/no_code_explained_1775778499229.png" alt="No-Code">
                     </div>
-                    <div class="feature-text">
+                    <div class="feature-info">
                         <h3>No-Code</h3>
-                        <p>A democratização da automação. Crie fluxos de trabalho inteligentes sem tocar em uma única linha de código.</p>
-                        <div class="tags"><span>Agilidade</span><span>Acessibilidade</span></div>
+                        <p>Crie, teste e publique aplicações completas sem escrever uma linha de código. Agilidade pura para o seu negócio.</p>
+                        <ul class="tag-list">
+                            <li>Prototipagem</li>
+                            <li>Agilidade</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Comparativo Interativo (React) -->
-        <section id="comparativo" class="section bg-dim">
-            <div class="section-header">
-                <h2>Diferenças Técnicas</h2>
-                <p>Qual abordagem utilizar no seu projeto de automação?</p>
+        <section id="comparativo" class="compare-section">
+            <div class="compare-header">
+                <h2>Comparativo Técnico</h2>
+                <p>Fizemos uma análise profunda para ajudar na sua escolha.</p>
             </div>
-            <div id="react-comparison-root">
-                 <!-- Renderizado via script.js -->
+            <div id="react-comparison-root" class="react-root-container">
+                <!-- Fallback em caso de erro de JS/CORS -->
+                <div class="js-error-fallback">
+                    <p>Habilite o JavaScript para visualizar o comparativo interativo.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Vantagens com visual integrado -->
-        <section id="vantagens" class="section section-inverted">
-            <div class="banner-agile image-reveal">
-                <div class="banner-img">
-                    <img src="benefits_agile_1775778597252.png" alt="Diferencial Rocketseat UNIFECAF">
+        <!-- Banner de Benefícios Agregados -->
+        <section class="benefits-banner-section">
+            <div class="benefits-container image-reveal">
+                <div class="benefits-image">
+                    <img src="assets/benefits_agile_1775778597252.png" alt="Agilidade e IA">
                 </div>
-                <div class="banner-info">
-                    <h2>Por que aprender isso agora?</h2>
-                    <p>
-                        A economia digital exige rapidez. Unir a base acadêmica da <strong>UNIFECAF</strong> 
-                        com a agilidade prática da <strong>Rocketseat</strong> garante que você não apenas 
-                        entenda a teoria, mas saiba aplicar <strong>IA</strong> em problemas reais.
-                    </p>
-                    <ul class="benefit-list">
-                        <li><span>✔</span> Redução drástica de tempo de entrega</li>
-                        <li><span>✔</span> Prototipagem avançada com IA</li>
-                        <li><span>✔</span> Automação de processos empresariais</li>
-                    </ul>
+                <div class="benefits-copy">
+                    <h2>Por que essa parceria?</h2>
+                    <p>Unimos a <strong>tradição acadêmica da UNIFECAF</strong> com o <strong>mindset de agilidade da Rocketseat</strong> para entregar o curso mais atualizado do mercado.</p>
+                    <div class="check-group">
+                        <div class="check-item"><span>✦</span> Certificado Reconhecido</div>
+                        <div class="check-item"><span>✦</span> Projetos Reais com IA</div>
+                        <div class="check-item"><span>✦</span> Comunidade Ativa</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <span class="logo">UNIFECAF</span>
-                <p>Educação de qualidade para o seu futuro.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-branding">
+                <span class="logo-text">UNIFECAF × ROCKETSEAT</span>
+                <p>Formando os líderes da automação digital.</p>
             </div>
-            <div class="footer-partnership">
-                <p>Em parceria com:</p>
-                <img src="https://raw.githubusercontent.com/Rocketseat/bootcamp-gostack-desafios/master/.github/rocketseat.png" alt="Rocketseat Logo" class="partner-logo" style="height: 30px; filter: grayscale(1) brightness(2);">
+            <div class="footer-meta">
+                <p>&copy; 2026 UNIFECAF - Desenvolvido por Michael.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Script de lógica Separado -->
-    <script type="text/babel" src="script.js"></script>
+    <!-- Lógica de Negócio (UI & React Integrado) -->
+    <script src="script.js"></script>
 </body>
+
 
 </html>
